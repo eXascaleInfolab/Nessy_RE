@@ -50,8 +50,7 @@ def main():
     parser.add_argument("data_dir", type=str, help="Path to the dataset")
     parser.add_argument("dataset_name", type=str, help="TITLE, TOP_MEMBERS or EMPLOYEE")
     parser.add_argument("config", type=str, help="Path to the config")
-    parser.add_argument("--vocab_dir", type=str, default="palstm/dataset/vocab")
-    parser.add_argument("--log_dir", type=str, default="tacred_title_logs")
+    parser.add_argument("--log_dir", type=str, default="logs")
     parser.add_argument("--prior", type=str, default="uniform")
     parser.add_argument("--rules", type=str, default="")
 
@@ -79,9 +78,9 @@ def main():
     opt = vars(args)
     with open(args.config) as f:
         config = Bunch(json.load(f))
-    vocab_file = opt['vocab_dir'] + '/vocab.pkl'
+    vocab_file = os.path.join(opt['data_dir'], "vocab", 'vocab.pkl')
     vocab = Vocab(vocab_file, load=True)
-    emb_file = opt['vocab_dir'] + '/embedding.npy'
+    emb_file = os.path.join(opt['data_dir'], "vocab", 'embedding.npy')
     emb_matrix = np.load(emb_file)
     assert emb_matrix.shape[0] == vocab.size
     print("Loading data from {} with batch size {}...".format(
