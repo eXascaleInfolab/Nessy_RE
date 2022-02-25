@@ -12,7 +12,7 @@ latent feature representations.
 
 #### Data
 
-TACRED can be downloaded [here]().
+TACRED can be downloaded [here](https://catalog.ldc.upenn.edu/LDC2018T24).
 
 Supplemental data can be downloaded [here](https://drive.google.com/drive/folders/1YVL-T_UAxTNLg6t9OU71c2I33yH825Tc?usp=sharing).
 It includes the data for all 4 datasets that we experimented with:
