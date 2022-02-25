@@ -10,6 +10,26 @@ latent feature representations.
 
 ### Prerequisites
 
+#### Data
+
+TACRED can be downloaded [here]().
+
+Supplemental data can be downloaded [here](https://drive.google.com/drive/folders/1YVL-T_UAxTNLg6t9OU71c2I33yH825Tc?usp=sharing).
+It includes the data for all 4 datasets that we experimented with:
+
+  - title_random: Title dataset with random noise (noise ratio is 40%);
+  - title_ds: Title dataset with distant supervision noise;
+  - empoyee_ds: Employee dataset with distant supervision noise;
+  - top_members_ds: Top Members dataset with distant supervision noise.
+
+For each dataset, the following files are provided:
+
+  - vocabulary
+  - pre-trained embeddings for train, development and test data. The embeddings were obtained using [PALSTM model](https://github.com/yuhaozhang/tacred-relation)
+  - linking results: output of the entity linking tool (we used [BLINK](https://github.com/facebookresearch/BLINK))
+
+#### Packages
+
 
 ### Run pre-training
 
