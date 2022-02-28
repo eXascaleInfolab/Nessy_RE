@@ -9,7 +9,7 @@ import json
 import os
 import subprocess
 
-from experiments_list impoty experiments_title, experiments_employee, experiments_top_members
+from experiments_list import experiments_title, experiments_employee, experiments_top_members
 
 
 def main():
